@@ -229,11 +229,11 @@ function hasInfinityMult(tier) {
     }
     
     function dimBought(tier) {
-        return player[TIER_NAMES[tier]+"Bought"] % 10;
+        return player[TIER_NAMES[tier-1]+"Bought"] % 10;
     }
     
     function buyOneDimension(tier) {
-        var name = TIER_NAMES[tier];
+        var name = TIER_NAMES[tier-1];
         var cost = player[name + 'Cost'];
         auto = false;
     
@@ -289,7 +289,7 @@ function hasInfinityMult(tier) {
     }
     
     function buyManyDimension(tier) {
-        var name = TIER_NAMES[tier];
+        var name = TIER_NAMES[tier-1];
         var cost = player[name + 'Cost'].times(10 - dimBought(tier));
     
         auto = false;
