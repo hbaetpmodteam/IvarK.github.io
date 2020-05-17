@@ -4282,7 +4282,7 @@ function buyDilationUpgrade(id, costInc) {
         if (id == 2) {
             player.dilation.dilatedTime = new Decimal(0)
             player.dilation.nextThreshold = new Decimal(1000)
-            player.dilation.freeGalaxies = 0
+            player.dilation.freeGalaxies = 999999999
         }
     }
 
